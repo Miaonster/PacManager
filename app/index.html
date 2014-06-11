@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PacManager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/font-awesome-4.1.0/css/font-awesome.css">
+</head>
+<body>
+  <div class="search-bar">
+    <input class="search" type="input" placeholder="Type here, for example: google">
+    <i class="fa fa-plus icon"></i>
+    <i class="file fa fa-sun-o"></i>
+  </div>
+  <ul class="pac-list js-pac-list">
+    <!--<li>google</li>-->
+    <!--<li>github</li>-->
+  </ul>
+
+  <script type="text/template" class="js-tpl-li">
+  <% _.each(keys, function(key) { %>
+    <li><%=key%><i class="icon-rm fa fa-times"></i></li>
+  <% }); %>
+  </script>
+
+  <script src="lib/sea/sea.js"></script>
+  <script src="lib/jquery/jquery-2.0.3.js"></script>
+  <script src="lib/underscore/underscore.js"></script>
+  <script src="lib/string_score/string_score.js"></script>
+
+  <script>
+    seajs.use('./js/main.js');
+    seajs.config({
+      base: './js/',
+    });
+  </script>
+</body>
+</html>
