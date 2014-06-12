@@ -3,7 +3,7 @@
 var fs = require('fs');
 
 define(function () {
-  return {
+  var data = {
     path: '/Users/witcher42/local/server/www/pac/SwitchyPac.js',
     remains: '',
     domains: null,
@@ -63,4 +63,7 @@ define(function () {
     }
   };
 
+  data.init();
+
+  return data;
 });
